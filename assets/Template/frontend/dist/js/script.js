@@ -61,7 +61,8 @@
                             suhu.push(Number(data[i].tinggi_air));
                             categories.push(data[i].waktu);
                         }
-                        tampil_chart_modal(suhu,t_air,categories); 
+                        tampil_chart_modal(suhu,t_air,categories);
+                        tampil_tabel(data);
                     }
                 }
             });
@@ -69,6 +70,20 @@
     });
     //akhir fungsi cari
 
+    //fungsi modal tabel
+    function tampil_tabel(data){
+        table=document.getElementsByTagName('table');
+        for(var i=0;i<data.length;i++){
+            $('#tbody').append(`<tr>
+                                    <td>`+data[i].id+`</td>
+                                    <td>`+data[i].sensor_gas+`</td>
+                                    <td>`+data[i].tinggi_air+`</td>
+                                    <td>`+data[i].waktu+`</td>
+                                </tr>`);
+        }
+        $('table').DataTable();
+    }
+    //akhir fungsi modal tabdata[i]
 
     //fungsi modal chart
     function tampil_chart_modal(suhu,t_air,categorie){

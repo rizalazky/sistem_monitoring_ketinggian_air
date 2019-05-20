@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" href="<?php echo base_url()?>assets/Template/frontend/dist/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url()?>assets/Template/frontend/bootstrap/css/bootstrap.min.css">
+        <!--datatables-->
+        <link rel='stylesheet' href="<?php echo base_url()?>assets/Template/admin/plugins/datatables/jquery.dataTables.min.css">
         <title>Document</title>
    </head>
    <body>
@@ -67,7 +69,20 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="grafik-modal"></div>
-                                        <div class="tab-pane" id="tabel-modal"></div>
+                                        <div class="tab-pane" id="tabel-modal">
+                                            <table class="table table-hovered text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <td>ID</td>
+                                                        <td>Suhu</td>
+                                                        <td>Tinggi Air</td>
+                                                        <td>Waktu</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id='tbody'>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -146,6 +161,9 @@
         <script type="text/javascript" src="<?php echo base_url('assets/highchart/highcharts.js')?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/highchart/exporting.js')?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/highchart/highcharts-3d.js')?>"></script>
+        <!--datatables-->
+        <script src="<?php echo base_url('assets/Template/admin/plugins/datatables/jquery.dataTables.min.js') ;?>"></script>
+
         <script>
             
         </script>
